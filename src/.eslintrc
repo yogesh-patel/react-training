@@ -1,0 +1,38 @@
+{
+    "extends": "airbnb",
+
+    "rules": {
+        "indent": [2, 4, { "SwitchCase": 1 }],
+        "arrow-body-style": [2, "as-needed"],
+        "arrow-parens": [2, "as-needed"],
+        "no-multiple-empty-lines": [2, {"max": 1}],
+        "jsx-a11y/no-static-element-interactions": 0,
+        "react/require-default-props":0,
+        "comma-dangle": ["error", {
+          "arrays": "never",
+          "objects": "never",
+          "imports": "never",
+          "exports": "never",
+          "functions": "never"
+        }]
+    },
+
+    "plugins": [
+        "react"
+    ],
+
+    "settings": {
+        "import/resolver": "webpack"
+    },
+
+    "globals": {
+        "ENV": true,
+        "module": true,
+        "jest": true
+    },
+
+    "env": {
+        "browser": true,
+        "node": false
+    }
+}

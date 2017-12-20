@@ -1,0 +1,6 @@
+/**
+ * Created by Ashish Gupta on 16/05/17.
+ */
+window.AppConstants = {
+    BASE_URL = "https://cloud.centricsoftware.com/field-testing-service";
+}
