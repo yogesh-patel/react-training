@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeaderComponent from '../Header';
+import App from '../AppComponent';
 
 class AppContainer extends React.Component {
 
@@ -23,15 +23,10 @@ class AppContainer extends React.Component {
         this.setState({ isLoggedin: false });
     }
     render() {
-        return (<div>
-          <HeaderComponent
-            companyName="My Company"
-            loggedIn={this.state.isLoggedin}
-            onLogin={this.onLogin}
-            onLogout={this.onLogout}
-          />
-          {this.props.helloMessage}
-        </div>);
+        return (<App isLoggedin={this.state.isLoggedin}
+                     onLogin={this.onLogin}
+                       onLogout={this.onLogout}
+                     helloMessage={this.props.helloMessage}/>);
     }
 }
 

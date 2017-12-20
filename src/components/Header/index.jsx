@@ -1,23 +1,21 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class HeaderComponent extends Component {
-
-    render() {
-        let clockCallback = this.props.onLogin;
-        if (this.props.loggedIn) {
-            clockCallback = this.props.onLogout;
+const HeaderComponent = (props) => {
+        let clockCallback = props.onLogin;
+        if (props.loggedIn) {
+            clockCallback = props.onLogout;
         }
 
         let loginLogoutLabel = 'Login';
-        if (this.props.loggedIn) {
+        if (props.loggedIn) {
             loginLogoutLabel = 'Logout';
         }
 
         return (<div className="header">
           <span style={{ fontSize: 20 }}>
-            {this.props.companyName ?
-                    this.props.companyName : 'Your Company'}
+            {props.companyName ?
+                    props.companyName : 'Your Company'}
           </span>
           <div
             style={{ float: 'right' }}
@@ -27,7 +25,7 @@ class HeaderComponent extends Component {
           </div>
 
         </div>);
-    }
+
 }
 
 HeaderComponent.propTypes = {
