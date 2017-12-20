@@ -7,5 +7,5 @@ import AppContainer from 'components/AppContainer';
 import './style/app.css';
 
 ReactDOM.render(
-    <AppContainer helloMessage="Hello World"/>,
+  <AppContainer helloMessage="Hello World" />,
     document.getElementById('root'));
